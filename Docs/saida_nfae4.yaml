@@ -1,0 +1,19 @@
+alphabet:
+- '0'
+- '1'
+final_states:
+- '{q1}'
+initial_state: '{q0}'
+states:
+- '{q0}'
+- '{q1}'
+transitions:
+- from: '{q0}'
+  symbol: '0'
+  to:
+  - '{q0}'
+- from: '{q0}'
+  symbol: '1'
+  to:
+  - '{q1}'
+type: dfa

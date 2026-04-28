@@ -1,0 +1,18 @@
+type: dfa
+alphabet: ['0', '1']
+states: [even, odd]
+initial_state: even
+final_states: [even]
+transitions:
+  - from: even
+    symbol: '0'
+    to: [even]
+  - from: even
+    symbol: '1'
+    to: [odd]
+  - from: odd
+    symbol: '0'
+    to: [odd]
+  - from: odd
+    symbol: '1'
+    to: [even]

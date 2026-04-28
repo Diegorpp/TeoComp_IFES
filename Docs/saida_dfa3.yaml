@@ -1,0 +1,27 @@
+alphabet:
+- '0'
+- '1'
+final_states:
+- even
+initial_state: even
+states:
+- even
+- odd
+transitions:
+- from: even
+  symbol: '0'
+  to:
+  - even
+- from: even
+  symbol: '1'
+  to:
+  - odd
+- from: odd
+  symbol: '0'
+  to:
+  - odd
+- from: odd
+  symbol: '1'
+  to:
+  - even
+type: dfa

@@ -1,0 +1,32 @@
+cabal-version:      3.0
+name:               automata-converter
+version:            0.1.0.0
+synopsis:           Conversor NFAε → NFA → DFA com I/O YAML
+license:            MIT
+build-type:         Simple
+
+common shared-deps
+  build-depends:
+      base          >= 4.18 && < 5
+    , containers
+    , text
+    , yaml          >= 0.11
+    , aeson         >= 2.1
+    , scientific
+  ghc-options:      -Wall
+  default-language: GHC2021
+
+library
+  import:           shared-deps
+  hs-source-dirs:   src
+  exposed-modules:
+      Types
+    , YamlIO
+    , Conversion
+    , Pipeline
+
+executable automata-converter
+  import:           shared-deps
+  hs-source-dirs:   app
+  main-is:          Main.hs
+  build-depends:    automata-converter

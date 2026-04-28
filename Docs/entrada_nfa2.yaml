@@ -1,0 +1,15 @@
+type: nfa
+alphabet: [a, b]
+states: [p0, p1, p2]
+initial_state: p0
+final_states: [p2]
+transitions:
+  - from: p0
+    symbol: a
+    to: [p0, p1]
+  - from: p0
+    symbol: b
+    to: [p0]
+  - from: p1
+    symbol: b
+    to: [p2]

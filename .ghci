@@ -1,0 +1,3 @@
+-- Configuração automática do GHCi para este projeto.
+-- Ativa OverloadedStrings para que literais de string funcionem com Data.Text.
+:set -XOverloadedStrings
